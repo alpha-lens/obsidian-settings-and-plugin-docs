@@ -1,0 +1,18 @@
+/* quoto settings */
+.cm-embed-block.cm-callout {
+  line-height: 1.2;
+  padding-right: 15px;
+  padding-bottom: 5px;
+}
+
+.cm-embed-block.cm-callout pre {
+  background: #fff5;
+}
+
+.cm-embed-block.cm-callout pre > code {
+  color: white;
+}
+
+.HyperMD-quote.HyperMD-quote-1.cm-line::before {
+  border-left-width: 4px !important;
+}

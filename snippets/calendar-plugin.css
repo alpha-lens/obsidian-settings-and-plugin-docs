@@ -1,0 +1,24 @@
+/* calendar */
+
+table.calendar.svelte-pcimu8
+  > tbody
+  > tr
+  .day.has-note.today.svelte-q3wqg9:not(.active) {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+table.calendar.svelte-pcimu8
+  > tbody
+  > tr
+  > td:nth-child(7)
+  > .day.svelte-q3wqg9 {
+  color: pink;
+}
+
+table.calendar.svelte-pcimu8
+  > tbody
+  > tr
+  > td:nth-child(1)
+  > .day.svelte-q3wqg9 {
+  color: red;
+}

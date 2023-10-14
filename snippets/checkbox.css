@@ -1,0 +1,26 @@
+/* checkbox */
+input[type="checkbox"]:checked:after {
+  width: 15px;
+  height: 15px;
+}
+
+.anp-custom-checkboxes [data-task="p"] > input[type="checkbox"]:checked:after,
+.anp-custom-checkboxes
+  [data-task="p"]
+  > p
+  > input[type="checkbox"]:checked:after,
+.anp-custom-checkboxes [data-task="p"][type="checkbox"]:checked:after {
+  -webkit-mask-image: none;
+  background-color: inherit;
+  content: "🙏";
+}
+
+.anp-custom-checkboxes [data-task="r"] > input[type="checkbox"]:checked:after,
+.anp-custom-checkboxes
+  [data-task="r"]
+  > p
+  > input[type="checkbox"]:checked:after,
+.anp-custom-checkboxes [data-task="r"][type="checkbox"]:checked:after {
+  -webkit-mask-image: none;
+  content: "👉";
+}

@@ -1,0 +1,10 @@
+span.cm-highlight,
+mark {
+  border-radius: 5px;
+  background: linear-gradient(
+    to top,
+    rgba(243, 139, 168, 0.3) 40%,
+    transparent 60%
+  );
+  color: inherit !important;
+}

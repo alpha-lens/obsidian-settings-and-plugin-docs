@@ -1,0 +1,51 @@
+/* Header */
+
+.markdown-source-view.mod-cm6 .cm-content > .HyperMD-header {
+  padding: 15px !important;
+  width: calc(100% + 20px) !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content > .HyperMD-header > * {
+  margin: 0;
+}
+
+.HyperMD-header.HyperMD-header-1 {
+  background-color: rgba(var(--ctp-red), 0.2);
+  font-size: 2em;
+}
+
+.HyperMD-header.HyperMD-header-2 {
+  background-color: rgba(var(--ctp-peach), 0.2);
+  font-size: 1.5em;
+}
+
+.HyperMD-header.HyperMD-header-3 {
+  background-color: rgba(var(--ctp-green), 0.2);
+  font-size: 1.3em;
+}
+
+.HyperMD-header.HyperMD-header-4 {
+  background-color: rgba(var(--ctp-teal), 0.2);
+}
+
+.HyperMD-header.HyperMD-header-5 {
+  background-color: rgba(var(--ctp-lavender), 0.2);
+}
+
+.HyperMD-header.HyperMD-header-6 {
+  background-color: rgba(var(--ctp-mauve), 0.2);
+}
+
+div.cm-scroller div.cm-sizer > div.cm-contentContainer .HyperMD-header {
+  border-radius: 20px;
+  border: 10px solid var(--background-primary);
+  transform: translateX(-10px);
+}
+
+.workspace-split.mod-horizontal.mod-right-split .HyperMD-header {
+  border-color: var(--background-secondary) !important;
+}
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-header {
+  max-width: calc(100% + 20px);
+}

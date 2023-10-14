@@ -1,0 +1,6 @@
+.markdown-source-view.mod-cm6 .cm-link .cm-underline,
+.markdown-source-view.mod-cm6 .cm-url .cm-underline,
+a {
+  text-decoration: none;
+  border-bottom: 1px solid var(--link-external-color);
+}

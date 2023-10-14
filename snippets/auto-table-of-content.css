@@ -1,0 +1,12 @@
+/* TOC */
+.block-language-table-of-contents li a.internal-link {
+  border-bottom: 1px solid var(--link-external-color);
+}
+
+.block-language-table-of-contents ul ul {
+  list-style: circle;
+}
+
+.block-language-table-of-contents ul ul ul {
+  list-style: square;
+}

@@ -1,0 +1,24 @@
+.callout {
+  margin-top: 0.8em !important;
+  padding: 0 10px 10px;
+  overflow: visible;
+  --callout-border-width: 1px;
+  --callout-border-opacity: 0.5;
+  --callout-title-size: 1.2em;
+  --callout-blend-mode: normal;
+  background-color: transparent;
+}
+
+.callout .callout-title {
+  line-height: 1;
+  background-color: var(--background-primary);
+  margin-top: -0.8em;
+  width: fit-content;
+  padding: 0 0.5em;
+  letter-spacing: -0.05em;
+  font-variant-caps: all-small-caps;
+}
+
+.cm-embed-block.cm-callout {
+  padding-right: 0;
+}
