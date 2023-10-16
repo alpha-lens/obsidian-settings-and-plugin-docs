@@ -1,0 +1,120 @@
+/* MAINTENANCE NOTE
+These file files should always have the same CSS content, please,
+so that the styling in the Obsidian app and the published docs
+is consistent, across the docs and contributing sites:
+
+- docs/.obsidian/snippets/publish-simulation.css
+- docs/publish.css
+- contributing/.obsidian/snippets/publish-simulation.css
+- contributing/publish.css
+
+If you make any changes in one of those files, please copy
+them to the other one. Thank you.
+
+This can be done most conveniently by:
+
+- editing 'docs/.obsidian/snippets/publish-simulation.css' first, and testings in Obsidian
+- then running 'scripts/copy-docs-snippet-to-other-css-files.sh', which will copy that file to the other ones
+*/
+
+/* Style "<span class="related-pages">#plugin/quickadd</span>" sections */
+span.related-pages::before {
+    content: "See also: ";
+}
+span.related-pages a.tag {
+    background-color: var(--text-highlight-bg);
+    border: none;
+    color: black;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+/* Simulate a horizontal rule before each level-2 heading.
+   This is useful in dividing up long pages, so their structure is visible, by saving contributors
+   from having to remember to add actual horizontal rules manually.
+ */
+h2::before {
+    display: block;
+    content: '';
+    margin: 2rem 0;
+    border-bottom: var(--hr-thickness) solid var(--hr-color);
+}
+
+/* Top-align all table cells, for readability */
+table td, th {
+    vertical-align: top;
+}
+
+/* Use alternating shades for table rows */
+table tr:nth-child(odd) {
+    background-color: var(--background-primary) !important;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--background-secondary) !important;
+}
+
+/* Put a soft border around images, to make them stand out from the background */
+img {
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Put a soft border around callouts */
+div.callout {
+    box-shadow: 0 0.2rem 0.5rem var(--background-modifier-box-shadow);
+}
+
+/* Put a pale border around inline code samples, to make them stand out */
+:not(pre, figure) > code {
+    border: 1px solid var(--color-base-30);
+    border-radius:4px
+}
+
+/* Put a pale border around PRE code samples, to make them stand out */
+pre {
+    border: 1px solid var(--color-base-30);
+    border-radius:4px
+}
+
+/* Make Warning callouts red rather than a rather ugly orange */
+.callout[data-callout="warning"] {
+    --callout-color: 255, 23, 68;
+}
+
+.callout[data-callout="released"] {
+    --callout-color: 0, 200, 83;
+    --callout-icon: lucide-rocket;
+}
+
+/* When embedding sections of files, such as in 'Known Limitations.md,
+   headings from the original file are not included in the Table of Contents.
+   To work around this, we add a level 2 heading in the file containing the embed,
+   and hide the level 2 heading from the embedded content.
+*/
+body .markdown-embed h2 {
+    display: none;
+}
+
+/* Try to make embedded content look more like the original content.
+   Based on https://gist.github.com/h7b/18cd8f7bc8543501438318c7105896ec#file-clean-embeds-all-css-L94-L100
+   TODO: Remove the indentation from embedded content.
+*/
+.markdown-preview-view .markdown-embed-content,
+.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
+    max-height: unset;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/* Don't display a blue border down the left hand side of embedded content. */
+body {
+    --embed-border-left: unset;
+}
